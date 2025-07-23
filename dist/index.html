@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.jsdelivr.net/npm/@farcade/game-sdk@latest/dist/index.min.js"></script>
 		<title>Joker4Fun</title>
 		<style>
 			body {
@@ -20,6 +21,13 @@
 				text-align: center;
 			}
 		</style>
+		<script>
+			window.onload = function () {
+				if (window.FarcadeSDK) {
+					window.FarcadeSDK.singlePlayer.actions.ready();
+				}
+			};
+		</script>
 	</head>
 	<body>
 		<div>Joker4Fun</div>
