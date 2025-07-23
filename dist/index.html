@@ -1,36 +1,37 @@
-<!DOCTYPE  html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.jsdelivr.net/npm/@farcade/game-sdk@latest/dist/index.min.js"></script>
-		<title>Joker4Fun</title>
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				background-color: black;
-				color: white;
-				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-				font-size: 2rem;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 100vh;
-				flex-direction: column;
-				text-align: center;
-			}
-		</style>
-		<script>
-			window.onload = function () {
-				if (window.FarcadeSDK) {
-					window.FarcadeSDK.singlePlayer.actions.ready();
-				}
-			};
-		</script>
-	</head>
-	<body>
-		<div>Joker4Fun</div>
-		<div>🍿 Coming soon 🍿</div>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joker4Fun</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      font-size: 2rem;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@farcade/game-sdk@latest/dist/index.min.js"></script>
+</head>
+<body>
+  <div>
+    <div>Joker4Fun</div>
+    <div>🍿 Coming soon 🍿</div>
+  </div>
+
+  <script>
+    window.onload = function () {
+      if (window.FarcadeSDK) {
+        window.FarcadeSDK.singlePlayer.actions.ready();
+      }
+    };
+  </script>
+</body>
 </html>
