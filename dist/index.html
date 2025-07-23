@@ -26,12 +26,9 @@
     <div>🍿 Coming soon 🍿</div>
   </div>
 
-  <script>
-    window.onload = function () {
-      if (window.FarcadeSDK) {
-        window.FarcadeSDK.singlePlayer.actions.ready();
-      }
-    };
+  <script type="module">
+    import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk'
+    sdk.actions.ready();
   </script>
 </body>
 </html>
