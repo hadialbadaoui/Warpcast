@@ -1,7 +1,22 @@
 {
-  "accountAssociation": {
-    "header": "eyJmaWQiOjEwMjA5NzYsInR5cGUiOiJhdXRoIiwia2V5IjoiMHgyNmJGODFiMjA4MTAzZDIwMDEzZTc0OTQ4RkU0MDY2QWFlNDlDMjE2In0",
-    "payload": "eyJkb21haW4iOiJqb2tlcjRmdW5jaGFsbGVuZ2VzLmNvbSJ9",
-    "signature": "R8YkJ5wWQTSiaXnXoPKrw7nZM46Cfo9wbWwPF3Vw0RgVfrrbg32reAPDq0GpSuwk6SNUTTtLv5o9wmmO9EsxBhw="
-  }
+	"frame":
+	{
+		"name":"Challenge Me",
+		"homeUrl":"https://joker4funchallenges.com",
+		"iconUrl":"https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1801535-c753-457f-b86c-8009480a7200/original",
+		"version":"1",
+		"imageUrl":"https://joker4funchallenges.com/image.png",
+		"subtitle":"Can you beat me?",
+		"webhookUrl":"https://joker4funchallenges.com/api/webhook",
+		"description":"This mini App is about challenging each other to prove yourself",
+		"splashImageUrl":"https://joker4funchallenges.com/splash.png",
+		"primaryCategory":"games",
+		"splashBackgroundColor":"#000000"
+	},
+		"accountAssociation":
+		{
+			"header": "eyJmaWQiOjEwMjA5NzYsInR5cGUiOiJhdXRoIiwia2V5IjoiMHgyNmJGODFiMjA4MTAzZDIwMDEzZTc0OTQ4RkU0MDY2QWFlNDlDMjE2In0",
+			"payload": "eyJkb21haW4iOiJqb2tlcjRmdW5jaGFsbGVuZ2VzLmNvbSJ9",
+			"signature": "R8YkJ5wWQTSiaXnXoPKrw7nZM46Cfo9wbWwPF3Vw0RgVfrrbg32reAPDq0GpSuwk6SNUTTtLv5o9wmmO9EsxBhw="
+		}
 }
