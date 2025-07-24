@@ -81,7 +81,7 @@
 
 	<section>
 		<h1><strong>Joker4Fun</strong></h1>
-		</div>
+		<div id="user-info">Loading user info...</div>
 	</section>
 
   <section>
@@ -167,9 +167,16 @@
   <script type="module">
 	import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
 
-	sdk.ready();
+	sdk.ready().then(() => {
+		console.log("Index page loaded successfully");
+		document.getElementById('user-info').innerHTML = `<p>Index page loaded successfully.</p>`;
+	}
+	else{
+		console.log("Index page not loaded");
+		document.getElementById('user-info').innerHTML = `<p>Index page not loaded.</p>`;
+	}
+	);
 	
-	console.log("Index page loaded successfully");
   </script>
 
 </main>
