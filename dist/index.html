@@ -107,13 +107,7 @@
 				const user = sdk.user;
 
 				if (user) {
-				  container.innerHTML = ''+
-					'<p><strong>Username:</strong> user.username</p>'+
-					'<p><strong>FID:</strong>{user.fid}</p>'+
-					'<p><strong>Display Name:</strong> user.displayName || \'N/A\'</p>'+
-					'<p><strong>Bio:</strong>{user.bio || \'No bio\'}</p>'+
-					'<img src="${user.pfpUrl}" alt="Profile" width="80" height="80" style="border-radius: 50%;">'+
-				  ';
+				  container.innerHTML = "<p><strong>Username:</strong> "+user.username+"</p>";
 				} else {
 				  container.innerHTML = "<p>User not connected.</p>";
 				}
