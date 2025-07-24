@@ -33,6 +33,7 @@
       border-radius: 5px;
       cursor: pointer;
       margin-top: 20px;
+	  text-align: center;
     }
   main {
     max-width: 700px;
@@ -95,27 +96,7 @@
 		<button id="connect-btn">Connect</button>
 		</div>
 	
-		<script type="module">
-			import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
-
-			const button = document.getElementById('connect-btn');
-			const container = document.getElementById('user-info');
-
-			button.addEventListener('click', async () => {
-			  try {
-				await sdk.ready();
-				const user = sdk.user;
-
-				if (user) {
-				  container.innerHTML = "<p><strong>Username:</strong> "+user.username+"</p>";
-				} else {
-				  container.innerHTML = "<p>User not connected.</p>";
-				}
-			  } catch (err) {
-				container.innerHTML = "<p>Failed to connect.</p>";
-			  }
-			});
-		</script>
+		
 	</section>
 
   <section>
@@ -197,6 +178,30 @@
     <p>My Project</p>
     <p>🍿 Coming soon 🍿</p>
   </section>
+
+	<script type="module">
+			import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
+			
+			sdk.actions.ready();
+
+			const button = document.getElementById('connect-btn');
+			const container = document.getElementById('user-info');
+
+			button.addEventListener("click", async () => {
+			  try {
+				await sdk.ready();
+				const user = sdk.user;
+
+				if (user) {
+				  container.innerHTML = "<p><strong>Username:</strong> "+user.username+"</p>";
+				} else {
+				  container.innerHTML = "<p>User not connected.</p>";
+				}
+			  } catch (err) {
+				container.innerHTML = "<p>Failed to connect.</p>";
+			  }
+			});
+		</script>
 
 </main>
 </body>
