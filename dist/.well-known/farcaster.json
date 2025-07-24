@@ -3,17 +3,18 @@
 	{
 		"name":"Challenge Me",
 		"homeUrl":"https://joker4funchallenges.com",
-		"iconUrl":"https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1801535-c753-457f-b86c-8009480a7200/original",
+		"iconUrl":"https://joker4funchallenges.com/image/Joker_logo.png",
 		"version":"1",
-		"imageUrl":"https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1801535-c753-457f-b86c-8009480a7200/original",
+		"imageUrl":"https://joker4funchallenges.com/image/Joker_logo.png",
 		"subtitle":"Can you beat me?",
-		"ogImageUrl":"https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1801535-c753-457f-b86c-8009480a7200/original",
-		"webhookUrl":"https://joker4funchallenges.com/api/webhook",
+		"ogImageUrl":"https://joker4funchallenges.com/image/Joker_logo.png",
+		"webhookUrl":"https://joker4funchallenges.com/image/Joker_logo.png",
 		"description":"This mini App is about challenging each other to prove yourself",
-		"heroImageUrl":"https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1801535-c753-457f-b86c-8009480a7200/original",
-		"splashImageUrl":"https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1801535-c753-457f-b86c-8009480a7200/original",
+		"heroImageUrl":"https://joker4funchallenges.com/image/Joker_logo.png",
+		"splashImageUrl":"https://joker4funchallenges.com/image/Joker_logo.png",
 		"primaryCategory":"games",
 		"splashBackgroundColor":"#000000"
+		"image": "https://joker4funchallenges.com/image/Joker_logo.png"
 	},
 		"accountAssociation":
 		{
