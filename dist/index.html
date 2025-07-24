@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Security-Policy" content="
 	  default-src 'self';
 	  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://esm.sh https://cdn.jsdelivr.net https://explorer-api.walletconnect.com;
-	  connect-src 'self' https://*.farcaster.xyz https://*.warpcast.com https://explorer-api.walletconnect.com https://explorer-api.walletconnect.com/v3/wallets?projectId=34357d3c125c2bcf2ce2bc3309d98715;
+	  connect-src 'self' https://*.farcaster.xyz https://*.warpcast.com https://explorer-api.walletconnect.com ;
 	  style-src 'self' 'unsafe-inline' 'unsafe-eval';
 	  img-src 'self' data: https:;
 	">
@@ -80,26 +80,36 @@
   <!-- Example: <img src="logo.png" alt="Joker4Fun Logo" class="logo" /> -->
 
 	<section>
+		<h1>Welcome to Challenge Me</h1>
+		<div id="user-info">
+		<button id="connect-btn">Connect</button>
+		</div>
+	
 		<script type="module">
 			import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
 
-			sdk.ready().then(() => {
+			const button = document.getElementById("connect-btn");
+			const container = document.getElementById("user-info");
+
+			button.addEventListener("click", async () => {
+			  try {
+				await sdk.ready();
 				const user = sdk.user;
-				const container = document.getElementById("user-info");
 
 				if (user) {
-					container.innerHTML = ""
+				  container.innerHTML = `
 					<p><strong>Username:</strong> user.username</p>
 					<p><strong>FID:</strong>{user.fid}</p>
 					<p><strong>Display Name:</strong> user.displayName || 'N/A'</p>
 					<p><strong>Bio:</strong>{user.bio || 'No bio'}</p>
 					<img src="${user.pfpUrl}" alt="Profile" width="80" height="80" style="border-radius: 50%;">
-					";
+				  `;
 				} else {
-					container.innerHTML = "<p> User not connected.</p>";
+				  container.innerHTML = "<p>User not connected.</p>";
 				}
-			}).catch(() => {
-				document.getElementById("user-info").innerHTML = "<p>Failed to load user info.</p>";
+			  } catch (err) {
+				container.innerHTML = "<p>Failed to connect.</p>";
+			  }
 			});
 		</script>
 	</section>
