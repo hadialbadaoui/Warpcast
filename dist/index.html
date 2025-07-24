@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="
 	  default-src 'self';
 	  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://esm.sh https://cdn.jsdelivr.net https://explorer-api.walletconnect.com;
@@ -10,6 +9,7 @@
 	  style-src 'self' 'unsafe-inline' 'unsafe-eval';
 	  img-src 'self' data: https:;
 	">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joker4Fun</title>
   <style>
     body {
@@ -80,9 +80,28 @@
   <!-- Example: <img src="logo.png" alt="Joker4Fun Logo" class="logo" /> -->
 
 	<section>
-		<div id="user-info">
-			<button onclick="sdk.actions.connect()">Connect</button>
-		</div>
+		<script type="module">
+			import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
+
+			sdk.ready().then(() => {
+				const user = sdk.user;
+				const container = document.getElementById("user-info");
+
+				if (user) {
+					container.innerHTML = ""
+					<p><strong>Username:</strong> user.username</p>
+					<p><strong>FID:</strong>{user.fid}</p>
+					<p><strong>Display Name:</strong> user.displayName || 'N/A'</p>
+					<p><strong>Bio:</strong>{user.bio || 'No bio'}</p>
+					<img src="${user.pfpUrl}" alt="Profile" width="80" height="80" style="border-radius: 50%;">
+					";
+				} else {
+					container.innerHTML = "<p> User not connected.</p>";
+				}
+			}).catch(() => {
+				document.getElementById("user-info").innerHTML = "<p>Failed to load user info.</p>";
+			});
+		</script>
 	</section>
 
   <section>
@@ -166,23 +185,5 @@
   </section>
 
 </main>
-
-  <script type="module">
-    import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk'
-	
-    sdk.actions.ready();
-
-	sdk.onConnect(async () => {
-	const user = await sdk.wallet.getUserInfo()
-	const container = document.getElementById("user-info")
-	container.innerHTML = `
-	<p><strong>FID:</strong> user.fid</p>
-	<p><strong>Username:</strong>{user.username}</p>
-	<p><strong>Display Name:</strong> user.displayName || "N/A"</p>
-	<p><strong>Bio:</strong>{user.bio?.text || "N/A"}</p>
-	<img src="${user.pfpUrl}" alt="PFP" width="100" style="border-radius: 50%;" />
-	`
-  })
-  </script>
 </body>
 </html>
