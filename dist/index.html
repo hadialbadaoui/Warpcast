@@ -2,13 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="
-	  default-src 'self';
-	  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://esm.sh https://cdn.jsdelivr.net https://explorer-api.walletconnect.com;
-	  connect-src 'self' https://*.farcaster.xyz https://*.warpcast.com https://explorer-api.walletconnect.com ;
-	  style-src 'self' 'unsafe-inline' 'unsafe-eval';
-	  img-src 'self' data: https:;
-	">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joker4Fun</title>
   <style>
@@ -24,17 +17,6 @@
     padding: 20px;
     min-height: 100vh;
   }
-    #connect-btn {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #6200ee;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-	  text-align: center;
-    }
   main {
     max-width: 700px;
     width: 100%;
@@ -92,11 +74,8 @@
 
 	<section>
 		<h1>Welcome to Challenge Me</h1>
-		<div id="user-info">
-		<button id="connect-btn">Connect</button>
+		<p> Joker4Fun </p>
 		</div>
-	
-		
 	</section>
 
   <section>
@@ -178,30 +157,6 @@
     <p>My Project</p>
     <p>🍿 Coming soon 🍿</p>
   </section>
-
-	<script type="module">
-			import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
-			
-			sdk.actions.ready();
-
-			const button = document.getElementById('connect-btn');
-			const container = document.getElementById('user-info');
-
-			button.addEventListener("click", async () => {
-			  try {
-				await sdk.ready();
-				const user = sdk.user;
-
-				if (user) {
-				  container.innerHTML = "<p><strong>Username:</strong> "+user.username+"</p>";
-				} else {
-				  container.innerHTML = "<p>User not connected.</p>";
-				}
-			  } catch (err) {
-				container.innerHTML = "<p>Failed to connect.</p>";
-			  }
-			});
-		</script>
 
 </main>
 </body>
