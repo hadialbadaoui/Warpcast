@@ -14,13 +14,6 @@
 		"splashImageUrl":"https://joker4funchallenges.com/image/Joker_logo.png",
 		"primaryCategory":"games",
 		"splashBackgroundColor":"#000000"
-		"image": "https://joker4funchallenges.com/image/Joker_logo.png"
-		"post_url": "https://joker4funchallenges.com/action",
-		"buttons": [
-			{ 
-				"label": "Play" 
-			}
-		]
 	},
 		"accountAssociation":
 		{
