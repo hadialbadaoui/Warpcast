@@ -24,6 +24,16 @@
     padding: 20px;
     min-height: 100vh;
   }
+    #connect-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #6200ee;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
   main {
     max-width: 700px;
     width: 100%;
@@ -88,22 +98,22 @@
 		<script type="module">
 			import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
 
-			const button = document.getElementById("connect-btn");
-			const container = document.getElementById("user-info");
+			const button = document.getElementById('connect-btn');
+			const container = document.getElementById('user-info');
 
-			button.addEventListener("click", async () => {
+			button.addEventListener('click', async () => {
 			  try {
 				await sdk.ready();
 				const user = sdk.user;
 
 				if (user) {
-				  container.innerHTML = `
-					<p><strong>Username:</strong> user.username</p>
-					<p><strong>FID:</strong>{user.fid}</p>
-					<p><strong>Display Name:</strong> user.displayName || 'N/A'</p>
-					<p><strong>Bio:</strong>{user.bio || 'No bio'}</p>
-					<img src="${user.pfpUrl}" alt="Profile" width="80" height="80" style="border-radius: 50%;">
-				  `;
+				  container.innerHTML = ''+
+					'<p><strong>Username:</strong> user.username</p>'+
+					'<p><strong>FID:</strong>{user.fid}</p>'+
+					'<p><strong>Display Name:</strong> user.displayName || \'N/A\'</p>'+
+					'<p><strong>Bio:</strong>{user.bio || \'No bio\'}</p>'+
+					'<img src="${user.pfpUrl}" alt="Profile" width="80" height="80" style="border-radius: 50%;">'+
+				  ';
 				} else {
 				  container.innerHTML = "<p>User not connected.</p>";
 				}
