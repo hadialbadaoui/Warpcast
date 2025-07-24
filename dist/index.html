@@ -80,18 +80,8 @@
   <!-- Example: <img src="logo.png" alt="Joker4Fun Logo" class="logo" /> -->
 
 	<section>
-		<div id="connect-section" name="connect-section" style="text-align:center; margin-top:40px;">
-			<button id="connectBtn" name="connectBtn" style="padding:10px 20px; font-size:16px; border:none; background:#9146FF; color:white; border-radius:5px;">
-				Connect to Warpcast
-			</button>
-		</div>
-
-		<div id="profile" name="profile" style="display:none; text-align:center; color:white; font-family:sans-serif; margin-top:30px;"></p>
-			<p><img id="pfp" name="pfp" src="" width="100" height="100" style="border-radius:50%; margin-bottom:10px;" />
-			<h2 id="displayName" name="displayName">Display Name</h2>
-			<p>@<span id="username" name="username">Username</span></p>
-			<p><strong>FID:</strong> <span id="fid" name="fid"></span></p>
-			<p id="bio" name="bio">Bio will appear here.</p>
+		<div id="user-info">
+			<button onclick="sdk.actions.connect()">Connect</button>
 		</div>
 	</section>
 
@@ -181,22 +171,18 @@
     import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk'
 	
     sdk.actions.ready();
-	
-	document.getElementById('connectBtn').addEventListener('click', async () => {
-    const session = await sdk.connect()
 
-    const user = session?.user
-
-    // Example: show username and fid
-	if (user) {
-		document.getElementById('pfp').src = user.pfp?.url
-		document.getElementById('username').innerText = user.username
-		document.getElementById('fid').innerText = user.fid
-		document.getElementById('bio').innerText = user.profile?.bio?.text
-		document.getElementById('connect-section').style.display = 'none'
-		document.getElementById('profile').style.display = 'block'
-		}
-	})
+	sdk.onConnect(async () => {
+	const user = await sdk.wallet.getUserInfo()
+	const container = document.getElementById("user-info")
+	container.innerHTML = `
+	<p><strong>FID:</strong> user.fid</p>
+	<p><strong>Username:</strong>{user.username}</p>
+	<p><strong>Display Name:</strong> user.displayName || "N/A"</p>
+	<p><strong>Bio:</strong>{user.bio?.text || "N/A"}</p>
+	<img src="${user.pfpUrl}" alt="PFP" width="100" style="border-radius: 50%;" />
+	`
+  })
   </script>
 </body>
 </html>
