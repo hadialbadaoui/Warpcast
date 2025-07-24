@@ -169,14 +169,18 @@
 	
 	// After your app is fully loaded and ready to display
 	await sdk.actions.ready().then(() => {
-		console.log("Index page loaded successfully");
-		document.getElementById('user-info').innerHTML = `<p>Index page loaded successfully.</p>`;
-	}
-	else{
-			console.log("Index page not loaded");
-			document.getElementById('user-info').innerHTML = `<p>Index page not loaded.</p>`;
+		const user = sdk.user;
+		if(user) {
+			console.log("Index page loaded successfully");
+			document.getElementById('user-info').innerHTML = '<p>Index page loaded successfully.</p>';
 		}
-	);
+		else{
+				console.log("Index page not loaded");
+				document.getElementById('user-info').innerHTML = '<p>Index page not loaded.</p>';
+			}
+	}).catch(() => {
+		document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
+	});
 	
   </script>
 
