@@ -72,11 +72,13 @@
   <!-- Put your logo image here -->
   <!-- Example: <img src="logo.png" alt="Joker4Fun Logo" class="logo" /> -->
 
-  <h1 id="username">Joker4Fun</h1>
-  <p id="fid"></p>
-  <p id="displayName"></p>
-  <p id="pfp"></p>
-  <p id="bio"></p>
+	<section>
+	<p><strong>Username:</strong> <span id="username"></span></p>
+	<p><strong>FID:</strong> <span id="fid"></span></p>
+	<p><strong>Display Name:</strong> <span id="displayName"></span></p>
+	<p><strong>Bio:</strong> <span id="bio"></span></p>
+	<img id="pfp" alt="Profile Picture" width="100" style="border-radius: 50%;"/>
+	</section>
 
   <section>
     <h2>About Me</h2>
@@ -165,7 +167,7 @@
 	
     sdk.actions.ready();
 	
-	sdk.onConnect(async (session) => {
+	sdk.on("connect", async (session) => {
     const user = session?.user
     console.log('Connected user:', user)
 
@@ -173,8 +175,8 @@
     document.getElementById('username').textContent = user.username
     document.getElementById('fid').textContent = `FID: ${user.fid}`
     document.getElementById('displayName').textContent = user.displayName
-    document.getElementById(pfp).textContent = user.pfp
-    document.getElementById('bio').textContent = user.bio
+    document.getElementById(pfp).src  = user.pfp?.url
+    document.getElementById('bio').textContent = user.bio?.text
 	})
   </script>
 </body>
