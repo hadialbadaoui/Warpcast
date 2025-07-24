@@ -170,15 +170,15 @@
 	// After your app is fully loaded and ready to display
 	await sdk.actions.ready().then(() => {
 		const user = sdk.user;
-		console.log("Full SDK object:", sdk.user);
-		if(user) {
-			console.log("Index page loaded successfully");
-			document.getElementById('user-info').innerHTML = '<p>Index page loaded successfully.</p>';
-		}
-		else{
-				console.log("Index page not loaded");
-				document.getElementById('user-info').innerHTML = '<p>Index page not loaded.</p>';
-			}
+		console.log("Full SDK object:", sdk.user.id);
+		//if(user) {
+		//	console.log("Index page loaded successfully");
+		//	document.getElementById('user-info').innerHTML = '<p>Index page loaded successfully.</p>';
+		//}
+		//else{
+		//		console.log("Index page not loaded");
+		//		document.getElementById('user-info').innerHTML = '<p>Index page not loaded.</p>';
+		//	}
 	}).catch(() => {
 		document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
 	});
