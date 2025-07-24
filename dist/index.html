@@ -72,7 +72,11 @@
   <!-- Put your logo image here -->
   <!-- Example: <img src="logo.png" alt="Joker4Fun Logo" class="logo" /> -->
 
-  <h1>Joker4Fun</h1>
+  <h1 id="username">Joker4Fun</h1>
+  <p id="fid"></p>
+  <p id="displayName"></p>
+  <p id="pfp"></p>
+  <p id="bio"></p>
 
   <section>
     <h2>About Me</h2>
@@ -158,7 +162,20 @@
 
   <script type="module">
     import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk'
+	
     sdk.actions.ready();
+	
+	sdk.onConnect(async (session) => {
+    const user = session?.user
+    console.log('Connected user:', user)
+
+    // Example: show username and fid
+    document.getElementById('username').textContent = user.username
+    document.getElementById('fid').textContent = `FID: ${user.fid}`
+    document.getElementById('displayName').textContent = user.displayName
+    document.getElementById(pfp).textContent = user.pfp
+    document.getElementById('bio').textContent = user.bio
+	})
   </script>
 </body>
 </html>
