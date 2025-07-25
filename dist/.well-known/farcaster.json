@@ -1,43 +1,35 @@
 {
-  "frame": {
-    "name": "Challenge Me",
-    "iconUrl": "https://joker4funchallenges.com/favicon.ico",
-    "homeUrl": "https://joker4funchallenges.com",
-    "description": "Challenge each other then climb the leaderboard."
-    "imageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
-  },
-  "miniapp": {
-    "name": "Challenge Me",
-    "version": "1",
-    "iconUrl": "https://joker4funchallenges.com/favicon.ico",
-    "homeUrl": "https://joker4funchallenges.com",
-    "imageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
-    "splashImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
-    "splashBackgroundColor": "#000000",
-    "webhookUrl": "https://joker4funchallenges.com/api/webhook",
-    "subtitle": "Can you beat me?",
-    "description": "This mini App is about challenging each other to prove yourself",
-    "primaryCategory": "games",
-    "heroImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
-    "ogImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
-    "screenshotUrls": [
-      "https://joker4funchallenges.com/image/Joker_logo.png"
-    ],
-    "tags": [
-      "games",
-      "social",
-      "community",
-      "rewards"
-    ],
-    "tagline": "Challende and win rewards",
-    "buttonTitle": "Challenge Me",
-    "ogTitle": "Challenge Me",
-    "ogDescription": "Challenge each other then climb the leaderboard and earn rewards by being active on Farcast.",
-    "castShareUrl": "https://joker4funchallenges.com/image/Joker_logo.png"
-  },
-  "accountAssociation": {
-    "header": "eyJmaWQiOjEwMjA5NzYsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgwNDYwRjEzMzU1NDRlRjkxODM4NjQwNzlmNkUwRmYxMkJlMDIyNTBCIn0",
-    "payload": "eyJkb21haW4iOiJqb2tlcjRmdW5jaGFsbGVuZ2VzLmNvbSJ9",
-    "signature": "MHhlZjJjNjk0YzBkYzM0MjU3YTg5ZDA0NzRiMmEzNjljMjAwOTdiY2FiZjNjMTg3ZTZjMTMxNWU0Mjc0MWIwMWY3MWM4MzBhMjhlNGIwZGI0YThiZDViMTk5M2Y2YTM2MWVhMDliNzcxODczYWVlMTgxYjY0OTlhYzNjMTkzYTQxNDFj"
-  }
+	"accountAssociation": {
+		"header": "eyJmaWQiOjEwMjA5NzYsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgwNDYwRjEzMzU1NDRlRjkxODM4NjQwNzlmNkUwRmYxMkJlMDIyNTBCIn0",
+		"payload": "eyJkb21haW4iOiJqb2tlcjRmdW5jaGFsbGVuZ2VzLmNvbSJ9",
+		"signature": "MHhlZjJjNjk0YzBkYzM0MjU3YTg5ZDA0NzRiMmEzNjljMjAwOTdiY2FiZjNjMTg3ZTZjMTMxNWU0Mjc0MWIwMWY3MWM4MzBhMjhlNGIwZGI0YThiZDViMTk5M2Y2YTM2MWVhMDliNzcxODczYWVlMTgxYjY0OTlhYzNjMTkzYTQxNDFj"
+	},
+	"miniapp": {
+		"version": "1",
+		"name": "Challenge Me",
+		"iconUrl": "https://joker4funchallenges.com/favicon.ico",
+		"splashImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
+		"splashBackgroundColor": "#000000",
+		"homeUrl": "https://joker4funchallenges.com",
+		"subtitle": "Can you beat me?",
+		"description": "This mini App is about challenging each other to prove yourself",
+		"screenshotUrls": [
+			"https://joker4funchallenges.com/image/Joker_logo.png"
+		],
+		"primaryCategory": "games",
+		"tags": [
+			"games",
+			"social",
+			"community",
+			"rewards"
+		],
+		"heroImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
+		"tagline": "Challende and win rewards",
+		"ogTitle": "Challenge Me",
+		"ogDescription": "Challenge each other then climb the leaderboard and earn rewards by being active on Farcast.",
+		"ogImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
+		"imageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
+		"buttonTitle": "Challenge Me",
+		"castShareUrl": "https://joker4funchallenges.com/image/Joker_logo.png"
+	}
 }
