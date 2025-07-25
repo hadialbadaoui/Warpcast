@@ -14,75 +14,16 @@
     <meta name="fc:frame" content='{"version":"1","imageUrl":"https://joker4funchallenges.com/image/Joker_logo.png","button":{"title":"Challenge Me","action":{"type":"launch_frame","name":"Challenge Me!","url":"https://joker4funchallenges.com","splashImageUrl":"https://joker4funchallenges.com/favicon.ico","splashBackgroundColor":"#f5f0ec"}}}' />
   
   <title>Joker4Fun</title>
-  <style>
-    body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
-    color: #eee;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    min-height: 100vh;
-  }
-  main {
-    max-width: 700px;
-    width: 100%;
-  }
-  img.logo {
-    display: block;
-    max-width: 150px;
-    margin: 0 auto 30px;
-  }
-  h1, h2 {
-    color: #f5f5f5;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  p, ul {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 1.2em;
-  }
-  ul {
-    padding-left: 20px;
-  }
-  strong {
-	text-align: center;
-    color: #ffa500;
-  }
-  a {
-    color: #1e90ff;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  @media (max-width: 480px) {
-    body {
-      padding: 15px 10px;
-    }
-    img.logo {
-      max-width: 120px;
-	  margin-bottom: 20px;
-    }
-    p, ul {
-	  text-align: center;
-      font-size: 0.9rem;
-    }
-  }
-  </style>
   <script src="https://cdn.jsdelivr.net/npm/@farcade/game-sdk@latest/dist/index.min.js"></script>
+  <script type="module" crossorigin src="/assets/index-Ca3evCsn.js"></script>
 </head>
 <body>
 
 	<farcaster-frame
 		src = "https://joker4funchallenges.com"
 		title = "Challenge Me"
-		description = "Guess the code, beat the clock"
 		image = "https://joker4funchallenges.com/image/Joker_logo.png"
+		description = "Guess the code, beat the clock"
 	></farcaster-frame>
 	
 	<main>
@@ -175,39 +116,6 @@
     <p>🍿 Coming soon 🍿</p>
   </section>
   
-  <script type="module">
-	import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
-	
-	// After your app is fully loaded and ready to display
-	await sdk.actions.ready().then(() => {
-		const user = sdk.user;
-		console.log("Full SDK object:", sdk.user.id);
-		//if(user) {
-		//	console.log("Index page loaded successfully");
-		//	document.getElementById('user-info').innerHTML = '<p>Index page loaded successfully.</p>';
-		//}
-		//else{
-		//		console.log("Index page not loaded");
-		//		document.getElementById('user-info').innerHTML = '<p>Index page not loaded.</p>';
-		//	}
-	}).catch(() => {
-		document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
-	});
-	
-	
-	//async function init() {
-    //try {
-    //  await sdk.actions.ready();
-    //  const user = sdk.user;
-    //  console.log("User ID:", user.id);
-    //  document.getElementById('user-info').innerHTML = `<p>Welcome, ${user.displayName || 'user'}!</p>`;
-    //} catch {
-    //  document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
-    //}
-  //}
-
-  //init();
-  </script>
 
 </main>
 </body>
