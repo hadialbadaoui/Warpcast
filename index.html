@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--<meta http-equiv="Content-Security-Policy" content="
-	  default-src 'self';
-	  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://esm.sh https://cdn.jsdelivr.net https://explorer-api.walletconnect.com;
-	  connect-src 'self' https://explorer-api.walletconnect.com https://*.farcaster.xyz https://*.warpcast.com https://*.walletconnect.com https://warpcast.com;
-	  style-src 'self' 'unsafe-inline';
-	  img-src 'self' data: https:;
-  ">-->
-  <meta name="fc:frame" content="vNext">
+  
+  <meta name="fc:miniapp" content='{
+	"name": "Challenge Me",
+	"iconUrl": "https://joker4funchallenges.com/favicon.ico",
+	"homeUrl": "https://joker4funchallenges.com",
+	"description": "Challenge each other then climb the leaderboard and earn rewards by being active on Warpcast."
+	}' />
+	
+	<!-- For backward compatibility -->
+  <meta name="fc:frame" content='{
+	"name": "Challenge Me",
+	"iconUrl": "https://joker4funchallenges.com/favicon.ico",
+	"homeUrl": "https://joker4funchallenges.com",
+	"description": "Challenge each other then climb the leaderboard and earn rewards by being active on Warpcast."
+	}' />
   <title>Joker4Fun</title>
   <style>
     body {

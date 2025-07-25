@@ -12,7 +12,7 @@
     "splashBackgroundColor": "#000000",
     "homeUrl": "https://joker4funchallenges.com",
     "webhookUrl": "https://client.farcaster.xyz/v1/creator-rewards-notifs-webhook",
-    "subtitle": "Top Farpcast creators",
+    "subtitle": "Top Farcaster creators",
     "description": "Challenge each other then climb the leaderboard and earn rewards by being active on Warpcast.",
     "screenshotUrls": [
       "https://joker4funchallenges.com/image/Joker_logo.png",
@@ -23,12 +23,12 @@
     "tags": [
       "rewards",
       "leaderboard",
-      "farpcast",
+      "farcaster",
       "earn",
 	  "challenge"
     ],
     "heroImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
-    "tagline": "Top Farpcast creators",
+    "tagline": "Top Farcaster creators",
     "ogTitle": "Challenge Me",
     "ogDescription": "Challenge each other then climb the leaderboard and earn rewards by being active on Warpcast.",
     "ogImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png"
