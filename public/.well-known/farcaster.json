@@ -1,6 +1,13 @@
 {
   "frame": {
     "name": "Challenge Me",
+    "iconUrl": "https://joker4funchallenges.com/favicon.ico",
+    "homeUrl": "https://joker4funchallenges.com",
+    "description": "Challenge each other then climb the leaderboard."
+    "imageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
+  },
+  "miniapp": {
+    "name": "Challenge Me",
     "version": "1",
     "iconUrl": "https://joker4funchallenges.com/favicon.ico",
     "homeUrl": "https://joker4funchallenges.com",
