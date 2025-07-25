@@ -7,7 +7,7 @@
 	"miniapp": {
 		"version": "1",
 		"name": "Challenge Me",
-		"iconUrl": "https://joker4funchallenges.com/favicon.ico",
+		"iconUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
 		"splashImageUrl": "https://joker4funchallenges.com/image/Joker_logo.png",
 		"splashBackgroundColor": "#000000",
 		"homeUrl": "https://joker4funchallenges.com",
