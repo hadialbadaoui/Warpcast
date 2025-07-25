@@ -4,26 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-	<meta name="fc:miniapp" content='{
-	  "version": "1",
-	  "imageUrl": "https://joker4funchallenges.com/public/image/Joker_logo.png",
-	  "aspectRatio": "3:2",
-	  "button": {
-		"label": "Open Challenge Me",
-		"url": "https://joker4funchallenges.com"
-	  }
-	}' />
+	<meta name="fc:miniapp" content='{"version": "1","imageUrl": "https://joker4funchallenges.com/image/Joker_logo.png","aspectRatio": "3:2","button": {"label": "Open Challenge Me","url": "https://joker4funchallenges.com"}}' />
 	
 	<!-- For backward compatibility -->
-	<meta name="fc:frame" content='{
-	  "version": "1",
-	  "imageUrl": "https://joker4funchallenges.com/public/image/Joker_logo.png",
-	  "aspectRatio": "3:2",
-	  "button": {
-		"label": "Open Challenge Me",
-		"url": "https://joker4funchallenges.com"
-	  }
-	}' />
+	<meta name="fc:frame" content='{"version": "1","imageUrl": "https://joker4funchallenges.com/image/Joker_logo.png","aspectRatio": "3:2","button": {"label": "Open Challenge Me","url": "https://joker4funchallenges.com"}}' />
 
   <title>Joker4Fun</title>
   <style>
@@ -94,9 +78,8 @@
 		src = "https://joker4funchallenges.com"
 		title = "Challenge Me"
 		description = "Guess the code, beat the clock"
-		image = "https://joker4funchallenges.com/public/image/Joker_logo.png"
+		image = "https://joker4funchallenges.com/image/Joker_logo.png"
 	></farcaster-frame>
-	<!-- description = "Guess the code, beat the clock"-->
 	
 	<main>
 
@@ -207,6 +190,19 @@
 		document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
 	});
 	
+	
+	//async function init() {
+    //try {
+    //  await sdk.actions.ready();
+    //  const user = sdk.user;
+    //  console.log("User ID:", user.id);
+    //  document.getElementById('user-info').innerHTML = `<p>Welcome, ${user.displayName || 'user'}!</p>`;
+    //} catch {
+    //  document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
+    //}
+  //}
+
+  //init();
   </script>
 
 </main>
