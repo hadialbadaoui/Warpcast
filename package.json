@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@farcaster/frame-sdk": "latest",
     "@farcaster/frame-wagmi-connector": "latest",
+    "@farcaster/miniapp-sdk": "^0.2.1",
     "@farcaster/miniapp-wagmi-connector": "^1.0.0",
     "@tanstack/react-query": "5.45.1",
     "react": "^18.3.1",
