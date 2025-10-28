@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<!-- <meta name="fc:miniapp" content='{"version": "1","imageUrl": "https://joker4funchallenges.com/image/Joker_logo.png","aspectRatio": "3:2","button": {"label": "Open Challenge Me","url": "https://joker4funchallenges.com"}}' />
+	
+	<meta name="fc:frame" content='{"version": "1","imageUrl": "https://joker4funchallenges.com/image/Joker_logo.png","aspectRatio": "3:2","button": {"label": "Open Challenge Me","url": "https://joker4funchallenges.com"}}' />
+	-->
+	 <!-- head content -->
+    <meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://joker4funchallenges.com/image/Joker_logo.png","button":{"title":"Challenge Me,"action":{"type":"launch_miniapp","name":"Challenge Me!","url":"https://joker4funchallenges.com","splashImageUrl":"https://joker4funchallenges.com/favicon.ico","splashBackgroundColor":"#f5f0ec"}}}' />
+    <!-- For backward compatibility -->
+    <meta name="fc:frame" content='{"version":"1","imageUrl":"https://joker4funchallenges.com/image/Joker_logo.png","button":{"title":"Challenge Me","action":{"type":"launch_frame","name":"Challenge Me!","url":"https://joker4funchallenges.com","splashImageUrl":"https://joker4funchallenges.com/favicon.ico","splashBackgroundColor":"#f5f0ec"}}}' />
+  
+  <title>Joker4Fun</title>
+  <script src="https://cdn.jsdelivr.net/npm/@farcade/game-sdk@latest/dist/index.min.js"></script>
+</head>
+<body>
+
+	<farcaster-frame
+		src = "https://joker4funchallenges.com"
+		title = "Challenge Me"
+		image = "https://joker4funchallenges.com/image/Joker_logo.png"
+		description = "Guess the code, beat the clock"
+	></farcaster-frame>
+	
+	<main>
+	<div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Put your logo image here -->
+  <!-- Example: <img src="logo.png" alt="Joker4Fun Logo" class="logo" /> -->
+
+	<section>
+		<h1><strong>Joker4Fun</strong></h1>
+		<div id="user-info">Loading user info...</div>
+	</section>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I’m a <strong>team leader and experienced system developer</strong> with over 13 years of programming expertise.  
+      I actively volunteer with the Lebanese Red Cross, trained as an ambulance driver and emergency responder.
+    </p>
+    <p>
+      Outside tech, I lead tours in my village — hiking, biking, SUP, kayaking, and golf car rides.  
+      A board game enthusiast, I rent and sell games, plus offer mobile recharge services.
+    </p>
+    <p>
+      Passionate gamer and photographer, I bring creativity and problem-solving to all I do.  
+      Known as “Joker4Fun”, I’m active, social, and connected across communities.
+    </p>
+    <p>
+      Sports lover — football, basketball, and especially handball. I also practiced shot put, discus, and javelin.
+    </p>
+  </section>
+
+  <section>
+    <h2>My Social Stats</h2>
+    <p><strong>627</strong> Following &nbsp;&nbsp;|&nbsp;&nbsp; <strong>528</strong> Followers</p>
+  </section>
+
+  <section>
+    <h2>Remix Achievements</h2>
+    <p>I’ve completed all achievements in Remix.</p>
+    <p>
+      Hey everyone, I’m JOKER4FUN, a proud Remix Master legend.<br />
+      123-day streak, Level 155, and 711,800+ Remix Coins on this epic journey.
+    </p>
+    <p>
+      Recently launched my first game, <strong>"By Order"</strong>: a fun, fast brain-training challenge.
+    </p>
+    <p>
+      Join via my referral to get:<br />
+      - Tips to earn Master Achievements<br />
+      - Guidance creating your own game<br />
+      - Help promoting your game to 1,000+ plays<br />
+      - Access to my active Remix circle community
+    </p>
+  </section>
+
+  <section>
+    <h2>My New Game: Guess What? 🔐</h2>
+    <p>You have <strong>20 seconds</strong> to guess the correct <strong>4-digit code</strong>.
+    </p>
+    <ul>
+      <li>If all 4 numbers are correct, the door opens, you score 10 points, and advance.</li>
+      <li>If any number is wrong, incorrect digits turn red as hints. The door stays locked and the game ends.</li>
+    </ul>
+    <p><em>Fast, smart, and focused? Prove it. Your mind is the key.</em></p>
+	<p><a href="https://remix.gg?game=189dda0e-6ab5-42d0-9bbb-a6f60ebaf90d">Play Guess What?</a>.</p>
+  </section>
+
+  <section>
+    <h2>About "By Order"</h2>
+    <p>
+      Select five numbers in ascending order inside circles within 10 seconds.
+	  A fast-paced game to sharpen reflexes and IQ by training quick numerical sequence recognition.
+    </p>
+    <p>
+      Pro tip: Pick the two smallest numbers within 3 seconds, next two in 2 seconds, then reset focus before submitting.
+    </p>
+    <p>
+      “By Order” is more than a game — it’s a mental workout. Challenge yourself and others.
+    </p>
+    <strong>Game on! Test your focus, beat the clock, and level up.</strong></p>
+	<p><a href="https://remix.gg?game=00e3264f-4a65-4391-a3ff-b7beaedf2bfc">Play Guess What?</a>.</p>
+  </section>
+
+  <section>
+    <p>******************************</p>
+  </section>
+
+  <section>
+    <p>My Project</p>
+    <p>🍿 Coming soon 🍿</p>
+  </section>
+  
+  <script type="module">
+	import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
+	
+	// After your app is fully loaded and ready to display
+	await sdk.actions.ready().then(() => {
+		const user = sdk.user;
+		console.log("User ID:", user.id);
+		console.log("User Name:", user.displayName);
+		//if(user) {
+		//	console.log("Index page loaded successfully");
+		//	document.getElementById('user-info').innerHTML = '<p>Index page loaded successfully.</p>';
+		//}
+		//else{
+		//		console.log("Index page not loaded");
+		//		document.getElementById('user-info').innerHTML = '<p>Index page not loaded.</p>';
+		//	}
+	}).catch(() => {
+		document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
+	});
+	
+	
+	//async function init() {
+    //try {
+    //  await sdk.actions.ready();
+    //  const user = sdk.user;
+    //  console.log("User ID:", user.id);
+    //  document.getElementById('user-info').innerHTML = `<p>Welcome, ${user.displayName || 'user'}!</p>`;
+    //} catch {
+    //  document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
+    //}
+  //}
+
+  //init();
+  </script>
+
+</main>
+</body>
+</html>
