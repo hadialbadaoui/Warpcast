@@ -2,6 +2,8 @@ import { sdk } from "@farcaster/miniapp-sdk";
 import { useEffect } from "react";
 import { useAccount, useConnect, useSignMessage } from "wagmi";
 
+console.log("App.tsx is rendering"); // <--- add this at top level
+
 function App() {
   useEffect(() => {
 	console.log("Calling sdk.actions.ready()");
