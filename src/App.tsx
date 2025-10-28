@@ -1,4 +1,4 @@
-import { sdk } from "@farcaster/miniapp-sdk";
+import { sdk } from "@farcaster/frame-sdk";
 import { useEffect } from "react";
 import { useAccount, useConnect, useSignMessage } from "wagmi";
 
@@ -11,8 +11,7 @@ function App() {
 
   return (
     <>
-      <div style={{ padding: "1rem" }}>
-        <h2>Mini App + Vite + TS + React + Wagmi</h2>
+      <div>Mini App + Vite + TS + React + Wagmi</div>
         <ConnectMenu />
       </div>
     </>
