@@ -1,6 +1,7 @@
 import { sdk } from "@farcaster/frame-sdk";
 import { useEffect } from "react";
 import { useAccount, useConnect, useSignMessage } from "wagmi";
+import NavBar from "./components/NavBar";
 
 function App() {
   useEffect(() => {
@@ -8,6 +9,10 @@ function App() {
   }, []);
 
   return (
+	<div>
+      <NavBar />
+      {/* Other components or routes */}
+    </div>
     <>
       <div>Mini App + Vite + TS + React + Wagmi</div>
       <ConnectMenu />
