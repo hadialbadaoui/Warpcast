@@ -9,13 +9,12 @@ function App() {
   }, []);
 
   return (
-	<div>
-      <NavBar />
-      {/* Other components or routes */}
-    </div>
     <>
-      <div>Mini App + Vite + TS + React + Wagmi</div>
-      <ConnectMenu />
+      <NavBar />
+      <div style={{ padding: "1rem" }}>
+        <h2>Mini App + Vite + TS + React + Wagmi</h2>
+        <ConnectMenu />
+      </div>
     </>
   );
 }
