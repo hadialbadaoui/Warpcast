@@ -1,7 +1,7 @@
 import { sdk } from "@farcaster/frame-sdk";
 import { useEffect } from "react";
 import { useAccount, useConnect, useSignMessage } from "wagmi";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar.tsx";
 
 function App() {
   useEffect(() => {
