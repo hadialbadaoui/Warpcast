@@ -4,9 +4,7 @@ import { useAccount, useConnect, useSignMessage } from "wagmi";
 
 function App() {
   useEffect(() => {
-    if (typeof window !== "undefined") {
 		sdk.actions.ready();
-	}
   }, []);
 
   return (
