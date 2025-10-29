@@ -103,41 +103,6 @@
     <p>My Project</p>
     <p>🍿 Coming soon 🍿</p>
   </section>
-  
-  <script type="module">
-	import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
-	
-	// After your app is fully loaded and ready to display
-	await sdk.actions.ready().then(() => {
-		const user = sdk.user;
-		console.log("User ID:", user.id);
-		console.log("User Name:", user.displayName);
-		//if(user) {
-		//	console.log("Index page loaded successfully");
-		//	document.getElementById('user-info').innerHTML = '<p>Index page loaded successfully.</p>';
-		//}
-		//else{
-		//		console.log("Index page not loaded");
-		//		document.getElementById('user-info').innerHTML = '<p>Index page not loaded.</p>';
-		//	}
-	}).catch(() => {
-		document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
-	});
-	
-	
-	//async function init() {
-    //try {
-    //  await sdk.actions.ready();
-    //  const user = sdk.user;
-    //  console.log("User ID:", user.id);
-    //  document.getElementById('user-info').innerHTML = `<p>Welcome, ${user.displayName || 'user'}!</p>`;
-    //} catch {
-    //  document.getElementById('user-info').innerHTML = "<p>Failed to load user info.</p>";
-    //}
-  //}
-
-  //init();
-  </script>
 
 </main>
 </body>
