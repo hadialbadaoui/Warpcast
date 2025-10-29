@@ -9,13 +9,18 @@ import { config } from "./wagmi.ts";
 import "./index.css";
 
 const queryClient = new QueryClient();
+const root = document.getElementById("root");
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        <App />
-      </QueryClientProvider>
-    </WagmiProvider>
-  </React.StrictMode>,
-);
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
+      </WagmiProvider>
+    </React.StrictMode>
+  );
+} else {
+  console.error("❌ Root element not found in index.html");
+}
