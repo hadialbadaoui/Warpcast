@@ -1,43 +1,43 @@
 import { sdk } from "@farcaster/miniapp-sdk";
 import { useEffect, useState } from "react";
-import { useAccount, useConnect } from "wagmi";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const { isConnected } = useAccount();  // Check if the user is connected
+  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    if (isConnected) {
-      const initializeSdk = async () => {
-        try {
-          // Initialize the SDK first
-          await sdk.init();
-          console.log("✅ SDK initialized");
+    const init = async () => {
+      try {
+        // 1) If needed, detect if we are inside a Mini App environment
+        const isMini = await sdk.isInMiniApp();
+        console.log("isInMiniApp:", isMini);
 
-          // Now that the SDK is initialized, call ready
-          await sdk.actions.ready();
-          console.log("✅ sdk.actions.ready() called successfully");
+        // 2) Initialize SDK (if required)
+        await sdk.init();
+        console.log("✅ SDK initialized");
 
-          setLoading(false); // Indicate loading is complete
-        } catch (err) {
-          console.error("❌ SDK initialization or ready() failed", err);
-          setError(err);
-          setLoading(false); // Even if there's an error, stop loading
-        }
-      };
+        // 3) Call ready() to hide splash screen
+        await sdk.actions.ready();
+        console.log("✅ sdk.actions.ready() called");
 
-      initializeSdk();
-    } else {
-      console.log("❌ User is not connected, waiting for connection...");
-    }
-  }, [isConnected]); // Dependency on the user's connection state
+        setLoading(false);
+      } catch (err) {
+        console.error("❌ Initialization or ready() failed", err);
+        setError(err as Error);
+        setLoading(false);
+      }
+    };
+
+    init();
+  }, []);
+
+  if (loading) return <p>Loading mini-app …</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div>
-      <h2>Mini App + Vite + TS + React + Wagmi</h2>
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error.message}</p>}
+      <h2>App is ready inside Farcaster Mini App!</h2>
+      <p>Your environment is ready.</p>
     </div>
   );
 }
