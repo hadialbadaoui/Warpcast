@@ -4,15 +4,15 @@
     "version": "1",
     "iconUrl": "https://joker4funchallenges.com/favicon.ico",
     "homeUrl": "https://joker4funchallenges.com",
-    "imageUrl": "https://joker4funchallenges.com/image/imageUrl-32.png",
+    "imageUrl": "https://joker4funchallenges.com/image/imageUrl.png",
     "buttonTitle": "Challenge Me",
-    "splashImageUrl": "https://joker4funchallenges.com/image/splashImageUrl-200x200px.png",
+    "splashImageUrl": "https://joker4funchallenges.com/image/splashImageUrl.png",
     "splashBackgroundColor": "#000000",
     "webhookUrl": "https://joker4funchallenges.com/api/webhook",
     "subtitle": "Can you beat me?",
     "description": "This mini App is about challenging each other to prove yourself",
     "screenshotUrls": [
-      "https://joker4funchallenges.com/image/screenshotUrls-1284x2778.png"
+      "https://joker4funchallenges.com/image/screenshotUrls.png"
     ],
     "primaryCategory": "games",
     "tags": [
@@ -21,7 +21,7 @@
       "community",
       "rewards"
     ],
-    "heroImageUrl": "https://joker4funchallenges.com/image/heroImageUrl-1200x630px.png",
+    "heroImageUrl": "https://joker4funchallenges.com/image/heroImageUrl.png",
     "tagline": "Challenge and win rewards",
     "ogTitle": "Challenge Me",
     "ogDescription": "Challenge each other then climb the leaderboard and earn rewards by being active on Farcast.",
