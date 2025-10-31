@@ -32,6 +32,7 @@ function App() {
     // After SDK ready, check for NFT ownership
     async function check() {
       try {
+        console.log("checking NFT");
         const owns = await checkNFT();
         setHasNFT(owns);
       } catch (err) {
