@@ -1,23 +1,34 @@
-This is a [Vite](https://vitejs.dev) project bootstrapped with [`@farcaster/create-mini-app`](https://github.com/farcasterxyz/miniapps/tree/main/packages/create-mini-app).
+# Challenge Me Mini-App  
 
-For documentation and guides, visit [miniapps.farcaster.xyz](https://miniapps.farcaster.xyz/docs/getting-started).
+A fun social mini-app built for the Warpcast / Farcaster ecosystem that lets competitive community members challenge each other, track their wins, and climb the leaderboard.  
 
-## `farcaster.json`
+---
 
-The `/.well-known/farcaster.json` is served from the [public
-directory](https://vite.dev/guide/assets) and can be updated by editing
-`./public/.well-known/farcaster.json`.
+## 🚀 Features  
+- Issue and accept challenges in seconds with your network.  
+- Track wins, points and leaderboard ranking.  
+- Optional betting mechanism (with a platform fee) for extra stakes.  
+- Seamlessly shared in your Farcaster feed via mini-app embed.  
 
-You can also use the `public` directory to serve a static image for `splashBackgroundImageUrl`.
+---
 
-## Frame Embed
+## 🧩 Tech Stack  
+- 🖥️ **Frontend**: React + TypeScript + Vite  
+- 🔗 **Wallet & Chain**: wagmi + viem (for NFT ownership check)  
+- 🧩 **Mini-App SDK**: @farcaster/miniapp‑sdk for Farcaster environment integration  
+- 🌐 **Hosting**: Vercel (or similar) for HTTPS & custom domain  
 
-Add a the `fc:frame` in `index.html` to make your root app URL sharable in feeds:
+---
 
-```html
-  <head>
-    <!--- other tags --->
-    <meta name="fc:frame" content='{"version":"next","imageUrl":"https://placehold.co/900x600.png?text=Frame%20Image","button":{"title":"Open","action":{"type":"launch_frame","name":"App Name","url":"https://app.com"}}}' /> 
-  </head>
-```
+## 📋 Getting Started  
 
+### Prerequisites  
+- Node.js version >= 18.x  
+- npm (or yarn/pnpm)  
+- A supported wallet connected via Wagmi  
+
+### Installation  
+```bash
+git clone https://github.com/your-username/challenge-me.git  
+cd challenge-me  
+npm install  
