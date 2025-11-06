@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Farcaster Mini-App embed metadata -->
+  <!-- Farcaster Mini-App Embed Meta Tag (for sharing in Farcaster feeds) -->
   <meta name="fc:miniapp" 
         content='{"version":"1",
                   "imageUrl":"https://joker4funchallenges.com/image/ogImageUrl1.jpg",
@@ -17,7 +17,8 @@
                                      }
                            }
                 }' />
-  <!-- Backward compatibility for older embed format -->
+
+  <!-- Backward-compatibility frame tag (older embed format) -->
   <meta name="fc:frame" 
         content='{"version":"1",
                   "imageUrl":"https://joker4funchallenges.com/image/ogImageUrl1.jpg",
@@ -31,18 +32,19 @@
                            }
                 }' />
 
-  <title>Joker4Fun – Challenge Me</title>
-
-  <!-- Include the Farcaster Mini-App SDK (if required for your project) -->
+  <title>Joker4Fun – Challenge Me Mini App</title>
+  
+  <!-- Load the Farcaster Mini-App SDK (if required by your app) -->
   <script src="https://cdn.jsdelivr.net/npm/@farcaster/miniapp-sdk@latest/dist/index.min.js"></script>
-  <!-- Entry point of your React + Vite app -->
+  <!-- Load your app bundle (built by Vite / React) -->
   <script type="module" src="/src/main.tsx"></script>
+  
 </head>
 <body>
   <main>
     <div id="root"></div>
 
-    <!-- Intro section: for visitors outside the embed environment -->
+    <!-- Intro section for when someone visits your site outside the mini-app context -->
     <section>
       <h2>Challenge Me</h2>
       <p>
@@ -52,8 +54,8 @@
       </p>
     </section>
 
-    <!-- Value Proposition Table -->
     <section>
+      <!-- Jobs / Pains / Gains table -->
       <table border="1" cellspacing="0" cellpadding="5">
         <thead>
           <tr>
@@ -96,14 +98,15 @@
       </table>
     </section>
 
-    <!-- Coming Soon / Promo section -->
     <section>
       <p>******************************</p>
     </section>
+
     <section>
       <p>My Project</p>
       <p>🍿 Coming soon 🍿</p>
     </section>
+
   </main>
 </body>
 </html>

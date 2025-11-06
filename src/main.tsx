@@ -1,15 +1,26 @@
-// src/main.tsx
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { WagmiProvider } from "wagmi";
-import { wagmiConfig } from "./wagmi";
+
+import App from "./App.tsx";
+import { config } from "./wagmi.ts";
+
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <WagmiProvider config={wagmiConfig}>
-      <App />
-    </WagmiProvider>
-  </React.StrictMode>
-);
+const queryClient = new QueryClient();
+const root = document.getElementById("root");
+
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
+      </WagmiProvider>
+    </React.StrictMode>
+  );
+} else {
+  console.error("❌ Root element not found in index.html");
+}

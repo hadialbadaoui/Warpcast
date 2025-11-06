@@ -1,34 +1,10 @@
 {
   "compilerOptions": {
-    // Use composite so TypeScript can build this project independently
     "composite": true,
-
-    // Use ESNext modules (so Node + bundler can understand import/export)
-    "module": "ESNext",
-
-    // Use Node’s module resolution (Node-style imports in config/build code)
-    "moduleResolution": "node",
-
-    // Target a modern version of ECMAScript (for Node environment)
-    "target": "ES2022",
-
-    // Don’t produce actual output JS files (build tool handles bundling)
-    "noEmit": true,
-
-    // Skip checking of library declaration files (.d.ts) to speed up build
     "skipLibCheck": true,
-
-    // Enable strict type-checking
-    "strict": true,
-
-    // Ensure no fall-throughs in switch, no unused locals/params
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-
-    // Option for recent TS: allow .ts extensions in imports
-    "allowImportingTsExtensions": true
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
   },
-  // This config applies to files that run in Node, e.g., Vite config, scripts
-  "include": ["vite.config.ts", "build-scripts/**/*"]
+  "include": ["vite.config.ts"]
 }
