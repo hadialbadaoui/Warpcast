@@ -1,18 +1,13 @@
-import { farcasterFrame } from "@farcaster/frame-wagmi-connector";
+// src/wagmi.ts
 import { http, createConfig } from "wagmi";
-import { base, mainnet } from "wagmi/chains";
+import { mainnet } from "wagmi/chains";
+import { metaMask } from "wagmi/connectors";
 
-export const config = createConfig({
-  chains: [base, mainnet],
-  connectors: [farcasterFrame()],
+export const wagmiConfig = createConfig({
+  chains: [mainnet],
+  connectors: [metaMask()],
   transports: {
-    [base.id]: http(),
     [mainnet.id]: http(),
   },
+  ssr: true, // optional if using SSR
 });
-
-declare module "wagmi" {
-  interface Register {
-    config: typeof config;
-  }
-}
