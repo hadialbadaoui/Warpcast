@@ -1,22 +1,41 @@
-# Logs
-logs
-*.log
+# --- Node dependencies and build artifacts ---
+/node_modules/
+/dist/
+/build/
+/.venv/
+/.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Logs ---
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
+logs/
+*.log
 
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# --- Editor / OS files ---
+.vscode/
+.idea/
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# --- TypeScript build cache ---
+*.tsbuildinfo
+
+# --- Testing / coverage ---
+/coverage/
+/jest-coverage/
+*.lcov
+
+# --- Misc ---
+.cache/
+.cache-loader/
+*.tgz
+yarn.lock
+package-lock.json
+
+# --- Farcaster Mini-App specific ---
+/public/.well-known/farcaster.json   # if you prefer to not track manifest updates locally
