@@ -1,54 +1,13 @@
 {
-  // Point to the JSON schema version (optional, but helps IDEs with validation)
-  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
-
-  // Whether this config is the root for Biome (default: true)
-  "root": true,
-
-  // Files and folders Biome should process (or ignore)
-  "files": {
-    "includes": ["src/**/*.{ts,tsx,js,jsx}"],
-    "ignore": ["node_modules", "dist", "build"]
-  },
-
-  // Configure the formatter (code formatting rules)
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "indentWidth": 2,
-    "lineWidth": 100
+    "lineWidth": 120
   },
-
-  // Configure the linter (code quality / style rules)
   "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-      // You can add more specific rule overrides here
-    }
-  },
-
-  // Configure import organization (auto-sorting imports)
-  "organizeImports": {
     "enabled": true
   },
-
-  // Language-specific overrides (for TypeScript / JavaScript)
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "single"
-    }
-  },
-  "typescript": {
-    "formatter": {
-      "quoteStyle": "single"
-    }
-  },
-
-  // Additional overrides for JSON files (optional)
-  "json": {
-    "formatter": {
-      "trailingCommas": "none"
-    }
+  "organizeImports": {
+    "enabled": true
   }
 }

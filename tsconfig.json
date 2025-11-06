@@ -1,54 +1,25 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    // Set ECMAScript target version
-    "target": "ES2022",
-
-    // Specify module code generation
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-
-    // Enable support for React JSX using the new JSX transform
-    "jsx": "react-jsx",
-
-    // Base directory for resolving non-relative module names
-    "baseUrl": ".",
-
-    // Optionally configure path aliases (e.g., for src/*)
-    "paths": {
-      "@/*": ["src/*"]
-    },
-
-    // Libraries to be included in compilation (DOM for browser)
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-
-    // Do not emit compiled files — bundler (Vite) handles that
-    "noEmit": true,
-
-    // Skip type checking of all declaration files (*.d.ts)
     "skipLibCheck": true,
 
-    // Enable all strict type-checking options for safety
-    "strict": true,
-
-    // Additional helpful flags
-    "forceConsistentCasingInFileNames": true,
+    /* Bundler mode */
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "allowImportingTsExtensions": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build"
-  ]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
