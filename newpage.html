@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>New Page – Challenge Me</title>
+		<link rel="stylesheet" href="/index.css" />
+	</head>
+	<body>
+
+		<nav class="topnav" id="myTopnav">
+			<a href="index.html">Home</a>
+			<a href="newpage.html" class="active">New Page</a>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+			<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+		</nav>
+
+		<main>
+			<h2>Welcome to the New Page</h2>
+			<p>This is the additional page you linked to from the menu.</p>
+		</main>
+
+		<script>
+			function toggleMenu() {
+				var nav = document.getElementById("myTopnav");
+				if (nav.className === "topnav") {
+					nav.className += " responsive";
+				} else {
+					nav.className = "topnav";
+				}
+			}
+		</script>
+
+	</body>
+</html>
