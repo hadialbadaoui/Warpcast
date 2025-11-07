@@ -1,13 +1,9 @@
-import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
+// Simple static site build — no React
 export default defineConfig({
-  plugins: [react()],
-  server: {
-    allowedHosts: true,
-  },
+  root: ".",
   build: {
-    outDir: 'dist' // this must match what Vercel expects
-  }
+    outDir: "dist",
+  },
 });
