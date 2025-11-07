@@ -13,7 +13,10 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "@farcaster/miniapp-sdk": "^0.2.1"
+    "@farcaster/miniapp-sdk": "^0.2.1",
+    "@farcaster/frame-wagmi-connector": "^1.0.0",
+    "wagmi": "^2.19.0",
+    "@wagmi/chains": "^1.8.0"
   },
   "devDependencies": {
     "vite": "^7.0.0",
